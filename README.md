@@ -8,17 +8,8 @@ it figures out what language a sentence is by asking: which reference text/data 
 lets take this famous quote from [Mein Kampf](https://en.wikipedia.org/wiki/Mein_Kampf).
 
 > Whoever wants to live must fight, and whoever does not wish to struggle in this world of eternal conflict does not deserve life.
-```
-$ ./surprisal -d en=data/en.txt -d de=data/de.txt "Wer leben will, der kämpfe also, und wer nicht streiten will in dieser Welt des ewigen Ringens, verdient das Leben nicht."
-en           1355002 bytes
-de           1589265 bytes
 
-en               630 bits
-de                29 bits  <--
-
-query 258.1 ms
-load 7.9 ms
-```
+![demo](media/demo.png)
 
 630 bits against 29. the english reference has almost nothing to point at, so the sentence is spelled out byte by byte. the german one has the whole thing, so it's one pointer.
 
@@ -27,6 +18,7 @@ this sentence is from the german reference, so it matches itself. the big gap sh
 ## the idea
 
 Compression is Intellegence
+
 [![Part 1](https://img.youtube.com/vi/l6DKRf-fAAM/maxresdefault.jpg)](https://www.youtube.com/watch?v=l6DKRf-fAAM)
 
 i have watched this 3b1b video on information theory several times(the need to understand) and the idea stuck with me.
